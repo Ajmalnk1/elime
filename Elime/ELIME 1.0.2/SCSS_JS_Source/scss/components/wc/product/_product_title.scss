@@ -1,0 +1,9 @@
+.product_title {
+  font-size: rem-calc(24);
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: rem-calc(24);
+  @include breakpoint(large down) {
+    margin-bottom: rem-calc(0);
+  }
+}

@@ -1,0 +1,386 @@
+body:not(.body-completely-loaded) {
+  .elementor-location-footer,
+  .elementor-top-section {
+    content-visibility: hidden;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+
+.site-wrapper {
+  overflow: hidden;
+}
+.elementor-location-header .kitify--transparency-yes {
+  @include breakpoint(large) {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
+.elementor-location-header .kitify--transparency-yes.elementor-section.elementor-sticky:not(.elementor-sticky--effects) {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.wvr-customer-select {
+  padding: 0 rem-calc(10) !important;
+}
+
+.kitify-sidebar {
+  &.kitify-sidebar-layout_02 {
+    .widget {
+      border: solid 1px v(site-border-color);
+      padding: rem-calc(24);
+
+      .widget-title {
+        margin-top: 0;
+        padding-top: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .novaapf-price-filter-wrapper {
+        padding: 0;
+      }
+    }
+  }
+}
+
+body {
+  .kitify-team-member {
+    &.preset-type-1 {
+      .kitify-team-member__cover {
+        bottom: 40%;
+        transform: translate(0, -30%);
+      }
+
+      .kitify-team-member__inner:hover .kitify-team-member__cover {
+        transform: translate(0, -40%);
+      }
+
+      .kitify-team-member__content {
+        display: flex;
+        flex-direction: column;
+
+        .kitify-team-member__name {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+.kitify-posts {
+  &.preset-elime-1 {
+    .kitify-posts__item {
+      .kitify-posts__inner-box {
+        overflow: visible;
+      }
+
+      .kitify-posts__thumbnail {
+        overflow: hidden;
+      }
+
+      .kitify-posts__inner-content {
+        margin: rem-calc(-105) rem-calc(30) 0;
+
+        &:before {
+          content: "";
+          position: absolute;
+          background: #fff;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border: solid 1px #e2ddd2;
+          border-radius: 50%;
+          transform: rotate(10deg);
+          z-index: -1;
+          -webkit-transition: -webkit-transform 0.4s ease-in-out;
+          -ms-transition: -ms-transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .kitify-posts__inner-content-inner {
+          background: #faf6ed;
+          padding: rem-calc(30) rem-calc(60);
+          border-radius: 50%;
+          @include breakpoint(small down) {
+            padding: rem-calc(15);
+          }
+        }
+      }
+
+      &:hover {
+        .kitify-posts__inner-content {
+          &:before {
+            transform: rotate(0);
+          }
+        }
+
+        .kitify-posts__inner-content-inner {
+          background-color: v(site-accent-color);
+
+          * {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}
+//Custom Tabs Element
+.kitify-tabs {
+  &.kitify-tabs-style-elime-1 {
+    .kitify-tabs__control-wrapper {
+      overflow: visible;
+    }
+    .kitify-tabs__control {
+      .kitify-tabs__label {
+        position: relative;
+      }
+      &.active-tab,
+      &:hover {
+        .kitify-tabs__label {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #F9FFE9;
+            border-radius: 50%;
+            transform: rotate(10deg);
+            z-index: -1;
+          }
+        }
+        .kitify-tabs__label-text {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: solid 1px #E2E8CF;
+            border-radius: 50%;
+            transform: rotate(18deg);
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+  &.kitify-tabs-style-elime-2 {
+    .kitify-tabs__control-wrapper {
+      overflow: visible;
+    }
+    .kitify-tabs__control {
+      &.active-tab,
+      &:hover {
+        .kitify-tabs__control-inner {
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: solid 1px v(site-accent-color);
+            border-radius: 50%;
+            transform: rotate(10deg);
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+//Custom Image Comparison Element
+.kitify-image-comparison {
+  div.jx-controller {
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    left: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  div.jx-arrow {
+    display: none;
+  }
+}
+//Custom Testimonials Element
+.kitify-testimonials {
+  &.preset-type-1 {
+    @include breakpoint(large) {
+      .swiper-slide-visible {
+        opacity: 0.5;
+        &.swiper-slide-next {
+          opacity: 1;
+        }
+      }
+    }
+    .swiper-pagination-bullet {
+      background-color: v(site-accent-color);
+    }
+  }
+}
+.elm-box-shadow {
+  &::before {
+    content: "";
+    position: absolute;
+    background: v(blog-cat-bg);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(2deg);
+  }
+}
+.elm-box-shadow-2 {
+  &::before {
+    content: "";
+    position: absolute;
+    border: solid 1px v(site-accent-color);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(4deg);
+  }
+}
+.elm-box-shadow-3 {
+  a {
+    position: relative;
+    z-index: 2;
+  }
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      background: v(blog-cat-bg);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transform: rotate(10deg);
+      z-index: 1;
+    }
+    h2 {
+      background: v(site-accent-color);
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+}
+.elm-box-shadow-4 {
+  &::before {
+    content: "";
+    position: absolute;
+    border: solid 1px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(2deg);
+  }
+}
+.elime-button {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    border: solid 1px rgba(255,255,255,0.2);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(6deg);
+  }
+}
+.elime-elementor-button {
+  .elementor-button-wrapper {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      background: #fff;
+      border: solid 1px v(site-accent-color);
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transform: rotate(6deg);
+      -webkit-transition: -webkit-transform 0.4s ease-in-out;
+      -ms-transition: -ms-transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out;
+    }
+    &:hover {
+      &:before {
+        border-color: #fff;
+        transform: rotate(0deg);
+      }
+    }
+    .elementor-button {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+.home-screen a {
+	display: block;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+	border: 2px solid #cf736e;
+	border-radius: 1px;
+	margin: 0 auto;
+  img {
+  	bottom: -100%;
+  	width: 100%;
+  	height: auto;
+  	position: absolute;
+  	z-index: 0;
+    margin:0;
+    padding:0;
+  	-webkit-transition: top 5s;
+  	-moz-transition: top 5s;
+  	-ms-transition: top 5s;
+  	-o-transition: top 5s;
+  	transition: bottom 5s;
+  }
+  &:hover {
+    img {
+      bottom: 0;
+      -webkit-transition: all 5s;
+      -moz-transition: all 5s;
+      -ms-transition: all 5s;
+      -o-transition: all 5s;
+      transition: all 5s;
+    }
+  }
+}
+.home-screen-title {
+  font-size: rem-calc(18);
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-menu .menu-item-26 ul.mega-menu ul.mega-menu-main > li {
+	&:not(:last-child) {
+		padding-bottom: 0;
+	}
+}

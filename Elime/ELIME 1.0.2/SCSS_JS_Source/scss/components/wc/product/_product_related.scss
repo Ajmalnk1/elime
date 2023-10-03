@@ -1,0 +1,29 @@
+section.related,
+section.upsells {
+  text-align: left;
+  > h2 {
+    position: relative;
+    display: inline-block;
+    font-size: rem-calc(24);
+    font-weight: 300;
+    line-height: 1;
+    margin: 0 0 rem-calc(60) 0;
+    text-transform: uppercase;
+  }
+  ul.products {
+    @include breakpoint(medium down) {
+      padding-top: 0;
+    }
+  }
+
+  .product {
+    width: calc(100% / 2);
+    @include breakpoint(medium) {
+      width: calc(100% / 4);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

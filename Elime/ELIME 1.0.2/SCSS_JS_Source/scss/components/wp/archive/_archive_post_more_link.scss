@@ -1,0 +1,14 @@
+.entry-content__readmore {
+  display: inline-block;
+  background-color: v(site-accent-color);
+  color: #fff;
+  font-size: rem-calc(12);
+  font-weight: 700;
+  padding: rem-calc(12) rem-calc(20);
+  text-transform: capitalize;
+  border-radius: 5px;
+  &:hover {
+    background-color: v(blog-cat-bg);
+    color: v(site-accent-color);
+  }
+}
